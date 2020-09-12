@@ -1,0 +1,18 @@
+{
+  "request" : {
+    "urlPathPattern" : "/.*",
+    "headers" : {
+      "Accept" : {
+        "equalTo" : "application/xml"
+      }
+    },
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type": "text/plain"
+    },
+    "body": "hello again!"
+  }
+}
