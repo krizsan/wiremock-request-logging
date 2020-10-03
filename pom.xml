@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>se.ivankrizsan</groupId>
@@ -17,7 +17,18 @@
 
     <properties>
         <java.version>14</java.version>
-        <rest-assured.version>4.1.2</rest-assured.version>
+        <rest-assured.version>4.3.1</rest-assured.version>
+        <!--
+            Need to explicitly specify the Groovy version in order
+            to avoid an AbstractMethodError exception being thrown
+            with the message:
+            "Receiver class io.restassured.internal.ResponseSpecificationImpl
+            does not define or inherit an implementation of the resolved method
+            abstract getProperty(Ljava/lang/String;)Ljava/lang/Object; of
+            interface groovy.lang.GroovyObject.".
+            If not specified, then Groovy version 2.5.x will be used.
+        -->
+        <groovy.version>3.0.2</groovy.version>
     </properties>
 
     <dependencies>

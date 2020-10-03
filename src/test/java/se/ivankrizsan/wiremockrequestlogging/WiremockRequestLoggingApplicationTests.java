@@ -41,8 +41,8 @@ class WiremockRequestLoggingApplicationTests {
     void sendRequestToWireMockServerTest() {
         final Response theResponse = RestAssured
             .given()
-            .contentType(ContentType.TEXT)
-            .accept(ContentType.XML)
+            .contentType("application/xml")
+            .accept("application/xml")
             .when()
             .get(URL);
         theResponse
