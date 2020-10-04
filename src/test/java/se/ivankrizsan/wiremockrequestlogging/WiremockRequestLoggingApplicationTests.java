@@ -35,13 +35,11 @@ class WiremockRequestLoggingApplicationTests {
 
     /**
      * Tests sending a request to the WireMock server.
-     *
      */
     @Test
     void sendRequestToWireMockServerTest() {
         final Response theResponse = RestAssured
             .given()
-            .contentType("application/xml")
             .accept("application/xml")
             .when()
             .get(URL);
